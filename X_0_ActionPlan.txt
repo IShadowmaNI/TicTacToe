@@ -1,0 +1,23 @@
+TicTacToe
+- coordonatele la care facem mutarea sunt citite de la tastatura
+- Ce clase avem nevoie sa facem?
+- Actorii/Componentele jocului sunt:
+	- tabla de joc (adica o clasa cu numele PlayBoard, singura responsabilitate a tablei este sa mentina/reflecte starea jocului)
+	- doi jucatori (adica o Interfata cu numele Player si doua clase, una HumanPlayer si alta BotPlayer, singura responsabilitate a jucatorului este sa joace, adica sa faca mutarea, adica sa ofere coordonatele mutarii)
+	- un arbitru (adica o clasa cu numele Arbitru a carui unica responsabilitate este sa implementeze/respecte regulile jocului; adica sa valideze orice mutare, sa anunte rezultatul final al jocului)
+	
+- Relatii dintre actori/componente:
+	Arbitrul are table de joc si cei doi jucatori.
+
+- Comportamentele actorilor/componentelor:
+	Arbitru:
+		- sa existe doar daca are o tabla si doi jucatori
+		- sa inceapa jocul (adica metoda start)
+		- sa aleaga cine incepe si cu ce simbol
+		- sa valideze mutarea si sa o execute
+		- sa anunte rezultatul final al jocului
+		- sa arate/afiseze la consola starea jocului dupa fiecare mutare
+	PlayBoard:
+		- sa umple tabla de joc cu diverse simboluri la diverse pozitii
+	Player:
+		- sa furnizeze coordonatele mutarii dorite
